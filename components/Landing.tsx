@@ -15,9 +15,9 @@ export const Landing = () => {
         position: "relative",
         height: "100vh",
         width: "100vw",
-        color: "white",
         textAlign: "center",
       }}
+      id="landing"
     >
       <div
         css={{
@@ -135,6 +135,7 @@ export const Landing = () => {
           gap: "30px",
           "& svg": {
             fill: "white",
+            cursor: "pointer",
           },
         }}
       >
