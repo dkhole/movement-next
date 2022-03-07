@@ -37,6 +37,10 @@ export const Landing = () => {
           "& svg g": {
             fill: "rgba(152, 150, 221, 0.55)",
           },
+          "@media (min-width: 800px)": {
+            height: "300px",
+            width: "370px",
+          },
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element*/}
@@ -69,6 +73,9 @@ export const Landing = () => {
             fontSize: "1rem",
             fontWeight: 100,
             zIndex: 2,
+            "@media (min-width: 800px)": {
+              fontSize: "1.2rem",
+            },
           }}
         >
           Physiotherapy & Chiropractic Services
@@ -78,13 +85,16 @@ export const Landing = () => {
             margin: "15px 0",
             fontSize: "2.25rem",
             fontWeight: 600,
-
             zIndex: 2,
+            "@media (min-width: 800px)": {
+              fontSize: "3.5rem",
+            },
           }}
         >
           MOVEMENT MECHANICS
         </h1>
-        <button
+        <a
+          href="https://movement-mechanics.au2.cliniko.com/bookings#service"
           css={{
             height: "35px",
             width: "100px",
@@ -92,17 +102,25 @@ export const Landing = () => {
             border: "2px solid white",
             color: "white",
             fontFamily: "Prompt, sans-serif",
+            lineHeight: "34px",
             fontWeight: 200,
             zIndex: 2,
             cursor: "pointer",
+            textDecoration: "none",
             "&:hover": {
               backgroundColor: "white",
               color: "black",
             },
+            "@media (min-width: 800px)": {
+              height: "50px",
+              width: "110px",
+              fontSize: "1rem",
+              lineHeight: "48px",
+            },
           }}
         >
           Book Now
-        </button>
+        </a>
       </main>
       <div
         css={{
@@ -136,6 +154,17 @@ export const Landing = () => {
           "& svg": {
             fill: "white",
             cursor: "pointer",
+          },
+          "& svg:hover": {
+            fill: "#45457c",
+          },
+          "@media (min-width: 800px)": {
+            height: "115px",
+            gap: "45px",
+            "& svg": {
+              height: "40px",
+              width: "40px",
+            },
           },
         }}
       >

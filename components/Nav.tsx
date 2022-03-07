@@ -21,12 +21,26 @@ const navStyles = (scrollPosition: number) => css`
     letter-spacing: 1.75px;
     font-size: 0.6rem;
     font-weight: 200;
+    transition: font-size 0.5s;
+  }
+  & a:hover {
+    font-size: 0.7rem;
+    color: #c2c1fb;
   }
   ${scrollPosition > 200 &&
   `
     background-color: rgba(0, 0, 0, 0.89);
     color: white;
   `}
+  @media (min-width: 800px) {
+    gap: 20px;
+    & a {
+      font-size: 1rem;
+    }
+    & a:hover {
+      font-size: 1.15rem;
+    }
+  }
 `;
 
 export const Nav = () => {
@@ -60,16 +74,20 @@ export const Nav = () => {
           "svg g": {
             fill: "#45457c",
           },
+          "@media (min-width: 800px)": {
+            height: "150px",
+            width: "100px",
+          },
         }}
       >
         <MovementLogo />
       </div>
 
-      <a href="#landing">HOME</a>
-      <a href="#profile-a">ABOUT</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#testimonials">TESTIMONIALS</a>
-      <a href="#contact">CONTACT</a>
+      <a href="./#landing">HOME</a>
+      <a href="/staff">STAFF</a>
+      <a href="./#gallery">GALLERY</a>
+      <a href="./#testimonials">TESTIMONIALS</a>
+      <a href="./#contact">CONTACT</a>
     </nav>
   );
 };

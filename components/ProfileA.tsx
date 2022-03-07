@@ -1,9 +1,26 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { useEffect } from "react";
 
-export const ProfileA = () => {
+export interface ProfileProps {
+  preview: boolean;
+}
+
+export const ProfileA = ({ preview }: ProfileProps) => {
   return (
-    <>
+    <section
+      css={{
+        "@media (min-width: 800px)": {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#151515",
+          section: {
+            width: "50vw",
+          },
+        },
+      }}
+    >
       <section
         css={{
           background: "url(gallery1.webp)",
@@ -17,7 +34,7 @@ export const ProfileA = () => {
             height: "100%",
             width: "100%",
             background: "rgba(20, 20, 20, 0.76)",
-            backdropFilter: "blur(4px)",
+            backdropFilter: "blur(2px)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -49,9 +66,7 @@ export const ProfileA = () => {
               outline: "8px solid rgba(163, 163, 163, 0.36)",
               marginBottom: "40px",
             }}
-          >
-            {" "}
-          </div>
+          ></div>
           <h1>Paul Yu</h1>
           <span>Physiotherapist</span>
           <hr></hr>
@@ -59,26 +74,36 @@ export const ProfileA = () => {
       </section>
       <section
         css={{
-          backgroundColor: "#252525",
-          padding: "75px",
+          backgroundColor: "#151515",
+          padding: "50px",
           "& span": {
             fontSize: "1rem",
             fontWeight: "100",
             lineHeight: "27.5px",
           },
+          "& a": {
+            color: "white",
+            display: "block",
+            marginTop: "25px",
+          },
+          "& a:hover": {
+            color: "#45457c",
+          },
+          "@media (min-width: 800px)": {
+            div: {
+              height: "100%",
+            },
+          },
         }}
       >
         <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum urna rutrum tempor condimentum. Nullam maximus luctus dui,
-          in vulputate mauris sodales id. Cras ut enim ut nisi tempus molestie.
-          Suspendisse eget molestie lorem. Suspendisse egestas ante vitae velit
-          sollicitudin, quis volutpat sapien porttitor. Curabitur in tincidunt
-          ipsum. Donec efficitur purus tincidunt elit egestas, vel feugiat
-          tortor ornare. Maecenas.
+          {preview
+            ? `Paul is a Physiotherapist who graduated from the University of Sydney with a Bachelor of Science (Exercise and Sports Science) and a Masters of Physiotherapy. Paul’s first experience with physiotherapy was through his own injuries having had serious injuries to his wrist, elbow, shoulder, and knees. He found the value of recovery, rehabilitation, exercises, and prevention through his own experiences.`
+            : `Paul is a Physiotherapist who graduated from the University of Sydney with a Bachelor of Science (Exercise and Sports Science) and a Masters of Physiotherapy. Paul’s first experience with physiotherapy was through his own injuries having had serious injuries to his wrist, elbow, shoulder, and knees. He found the value of recovery, rehabilitation, exercises, and prevention through his own experiences.  Some his treatment methods include trigger point therapy, active release technique, mulligans, dry needling, joint mobilisations, taping techniques, DNS analysis and exercise prescription and post-surgical rehabilitation/programing. Paul has many sporting interests but has a particular interest in the NRL and NBA. His favourite teams are the Sydney Roosters and the Phoenix Suns. He regularly stays active with weight training, plyometric training and has played at various repetitive levels of Oztag.  Paul can modestly speak Korean and can provide services for those that require consultations in Korean.`}
         </span>
+        {preview ? <a href="/staff">Read more</a> : ""}
       </section>
-    </>
+    </section>
   );
 };
 

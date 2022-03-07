@@ -5,10 +5,11 @@ export const Testimonials = () => {
   return (
     <section
       css={{
-        height: "550px",
+        height: "400px",
         width: "100vw",
         background: "url(gallery2.jpg)",
         backgroundSize: "cover",
+        backgroundPosition: "20%",
       }}
       id="testimonials"
     >
@@ -29,18 +30,31 @@ export const Testimonials = () => {
             color: "#C2C1FB",
           },
           "& h1": {
-            padding: "75px 0",
+            padding: "70px 0 50px",
             textAlign: "center",
             fontSize: "1.8rem",
             fontWeight: 700,
           },
           "& span": {
             textAlign: "left",
-            fontSize: "1.1rem",
+            fontSize: "0.9rem",
             fontStyle: "italic",
             fontWeight: 200,
             letterSpacing: 1,
-            lineHeight: 1.25,
+            lineHeight: 1.5,
+          },
+          "@media (min-width: 800px)": {
+            "& h1": {
+              fontSize: "2.3rem",
+              fontWeight: 700,
+            },
+            "& div": {
+              width: "800px",
+            },
+            "& span": {
+              fontSize: "1.2rem",
+              fontWeight: 200,
+            },
           },
         }}
       >

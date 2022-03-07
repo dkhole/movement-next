@@ -6,7 +6,7 @@ export const Gallery = () => {
   return (
     <section
       css={{
-        backgroundColor: "#343434",
+        backgroundColor: "#242424",
         padding: "50px",
         "& h1": {
           fontSize: "2rem",
@@ -20,8 +20,16 @@ export const Gallery = () => {
           alignItems: "center",
           gap: 50,
         },
+
         "& section div img": {
           borderRadius: "0 20px 0 20px",
+        },
+        "@media (min-width: 800px)": {
+          "& section": {
+            justifyContent: "center",
+            flexDirection: "row",
+            gap: 100,
+          },
         },
       }}
       id="gallery"
