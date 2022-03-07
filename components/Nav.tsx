@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import MovementLogo from "./svgs/MovementLogo";
 
@@ -84,7 +85,7 @@ export const Nav = () => {
       </div>
 
       <a href="./#landing">HOME</a>
-      <a href="/staff">STAFF</a>
+      <Link href="/staff">STAFF</Link>
       <a href="./#gallery">GALLERY</a>
       <a href="./#testimonials">TESTIMONIALS</a>
       <a href="./#contact">CONTACT</a>
