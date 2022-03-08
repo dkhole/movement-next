@@ -26,7 +26,7 @@ export const ProfileA = ({ preview }: ProfileProps) => {
         css={{
           background: "url(gallery1.webp)",
           backgroundSize: "cover",
-          backgroundPosition: "59% 20%",
+          backgroundPosition: "20% 60%",
         }}
         id="profile-a"
       >

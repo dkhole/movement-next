@@ -7,6 +7,7 @@ import Facebook from "./svgs/FacebookLogo";
 import Instagram from "./svgs/InstagramLogo";
 import Location from "./svgs/Location";
 import Phone from "./svgs/Phone";
+import Link from "next/link";
 
 export const Landing = () => {
   return (
@@ -126,9 +127,13 @@ export const Landing = () => {
         css={{
           position: "absolute",
           height: "100%",
-          width: "100%",
+          width: "150%",
+          right: 0,
           top: 0,
           zIndex: -1,
+          "@media (min-width: 800px)": {
+            width: "100%",
+          },
         }}
       >
         <Image
@@ -168,10 +173,26 @@ export const Landing = () => {
           },
         }}
       >
-        <Instagram height={30} width={30} />
-        <Facebook height={30} width={30} />
-        <Location height={30} width={30} />
-        <Phone height={30} width={30} />
+        <Link
+          href={"https://www.instagram.com/movementmechanicshp/?hl=en"}
+          passHref
+        >
+          <Instagram height={30} width={30} />
+        </Link>
+        <Link href={"https://www.facebook.com/movementmechanicshp/"} passHref>
+          <Facebook height={30} width={30} />
+        </Link>
+        <Link
+          href={
+            "https://www.google.com/maps/place/Movement+Mechanics+Health+and+Performance/@-33.8437876,151.0493416,15z/data=!4m2!3m1!1s0x0:0xa3d457170d071d5e?sa=X&ved=2ahUKEwiq8LX-77X2AhWszTgGHeNUCdMQ_BJ6BAgwEAU"
+          }
+          passHref
+        >
+          <Location height={30} width={30} />
+        </Link>
+        <Link href={"#contact"} passHref>
+          <Phone height={30} width={30} />
+        </Link>
       </footer>
     </div>
   );

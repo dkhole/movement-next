@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import Link from "next/link";
 import Facebook from "../components/svgs/FacebookLogo";
 import Instagram from "../components/svgs/InstagramLogo";
 
@@ -37,8 +38,15 @@ export const Footer = ({}) => {
       }}
     >
       <div>
-        <Facebook />
-        <Instagram />
+        <Link
+          href={"https://www.instagram.com/movementmechanicshp/?hl=en"}
+          passHref
+        >
+          <Instagram height={30} width={30} />
+        </Link>
+        <Link href={"https://www.facebook.com/movementmechanicshp/"} passHref>
+          <Facebook height={30} width={30} />
+        </Link>
       </div>
       <span>© 2022 Movement Mechanics Pty Ltd</span>
     </footer>

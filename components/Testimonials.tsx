@@ -5,7 +5,6 @@ export const Testimonials = () => {
   return (
     <section
       css={{
-        height: "400px",
         width: "100vw",
         background: "url(gallery2.jpg)",
         backgroundSize: "cover",
@@ -19,6 +18,7 @@ export const Testimonials = () => {
           width: "100%",
           background: "rgba(20, 20, 20, 0.55)",
           backdropFilter: "saturate(1.2) blur(4px)",
+          paddingBottom: "75px",
           "& div": {
             display: "flex",
             flexDirection: "column",
@@ -61,12 +61,15 @@ export const Testimonials = () => {
         <h1>PATIENT TESTIMONIALS</h1>
         <div>
           <span>
-            I came across the yelp page and thought I should give him a try, and
-            I&apos;m so glad I did. I was pleasantly surprised at how
-            knowledgeable and professional he is. He was realistic with what he
-            can do and honest about what I can expect.
+            I’d absolutely recommend Movement Mechanics to anyone in need of
+            rehab or treatment. I’ve seen other physios and chiros in the past,
+            but nothing’s come close to the level of service and treatment I’ve
+            received here. From diagnosis through to rehab exercises, Mintae is
+            very thorough and meticulous in his approach. The treatments have
+            always worked like magic. Do yourself a favour and see these guys if
+            you’re sore or injured!
           </span>
-          <span>-- Friend</span>
+          <span>- Olivia</span>
         </div>
       </div>
     </section>
