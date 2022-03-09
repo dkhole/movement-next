@@ -8,8 +8,68 @@ import Instagram from "./svgs/InstagramLogo";
 import Location from "./svgs/Location";
 import Phone from "./svgs/Phone";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export const Landing = () => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (element) {
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#landing-subtitle"),
+        {
+          opacity: 0,
+          y: -30,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector(
+              "#landing-subtitle"
+            ),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#landing-title"),
+        {
+          opacity: 0,
+          scale: 0.85,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector("#landing-title"),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#landing-logo"),
+        {
+          opacity: 0,
+          scale: 0.75,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector("#landing-logo"),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <div
       css={{
@@ -19,8 +79,10 @@ export const Landing = () => {
         textAlign: "center",
       }}
       id="landing"
+      ref={ref}
     >
       <div
+        id="landing-logo"
         css={{
           position: "absolute",
           height: "150px",
@@ -70,6 +132,7 @@ export const Landing = () => {
         }}
       >
         <h1
+          id="landing-subtitle"
           css={{
             fontSize: "1rem",
             fontWeight: 100,
@@ -82,6 +145,7 @@ export const Landing = () => {
           Physiotherapy & Chiropractic Services
         </h1>
         <h1
+          id="landing-title"
           css={{
             margin: "15px 0",
             fontSize: "2.25rem",

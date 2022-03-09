@@ -1,9 +1,54 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export const Testimonials = () => {
+  const ref = useRef(null);
+  useEffect(() => {
+    const element = ref.current;
+    if (element) {
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#testimonials-title"),
+        {
+          opacity: 0,
+          y: -15,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.25,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector(
+              "#testimonials-title"
+            ),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#testimonials-desc"),
+        {
+          opacity: 0,
+          y: -15,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.25,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector(
+              "#testimonials-desc"
+            ),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+    }
+  }, []);
   return (
     <section
+      ref={ref}
       css={{
         width: "100vw",
         background: "url(gallery2.jpg)",
@@ -58,16 +103,16 @@ export const Testimonials = () => {
           },
         }}
       >
-        <h1>PATIENT TESTIMONIALS</h1>
-        <div>
+        <h1 id="testimonials-title">PATIENT TESTIMONIALS</h1>
+        <div id="testimonials-desc">
           <span>
-            I’d absolutely recommend Movement Mechanics to anyone in need of
-            rehab or treatment. I’ve seen other physios and chiros in the past,
-            but nothing’s come close to the level of service and treatment I’ve
-            received here. From diagnosis through to rehab exercises, Mintae is
-            very thorough and meticulous in his approach. The treatments have
-            always worked like magic. Do yourself a favour and see these guys if
-            you’re sore or injured!
+            &quot;I’d absolutely recommend Movement Mechanics to anyone in need
+            of rehab or treatment. I’ve seen other physios and chiros in the
+            past, but nothing’s come close to the level of service and treatment
+            I’ve received here. From diagnosis through to rehab exercises,
+            Mintae is very thorough and meticulous in his approach. The
+            treatments have always worked like magic. Do yourself a favour and
+            see these guys if you’re sore or injured!&quot;
           </span>
           <span>- Olivia</span>
         </div>

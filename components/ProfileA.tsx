@@ -1,26 +1,115 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export interface ProfileProps {
   preview: boolean;
 }
 
 export const ProfileA = ({ preview }: ProfileProps) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (element) {
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#profilea-pic"),
+        {
+          opacity: 0,
+          x: 200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: (element as HTMLElement).querySelector(
+            "#profilea-pic"
+          ),
+        }
+      );
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#profilea-name"),
+        {
+          opacity: 0,
+          x: 100,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector("#profilea-name"),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#profilea-title"),
+        {
+          opacity: 0,
+          x: 100,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector("#profilea-title"),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#profilea-line"),
+        {
+          opacity: 0,
+          x: 100,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector("#profilea-line"),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+      gsap.fromTo(
+        (element as HTMLElement).querySelector("#profilea-desc"),
+        {
+          opacity: 0,
+          x: 100,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.25,
+          scrollTrigger: {
+            trigger: (element as HTMLElement).querySelector("#profilea-desc"),
+            toggleActions: "restart none restart none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <section
       css={{
+        backgroundColor: "#151515",
         "@media (min-width: 800px)": {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#151515",
           section: {
             width: "50vw",
           },
         },
       }}
+      ref={ref}
     >
       <section
         css={{
@@ -56,6 +145,7 @@ export const ProfileA = ({ preview }: ProfileProps) => {
           }}
         >
           <div
+            id="profilea-pic"
             css={{
               height: "300px",
               width: "230px",
@@ -64,16 +154,17 @@ export const ProfileA = ({ preview }: ProfileProps) => {
               background: "url(paul.webp)",
               backgroundSize: "cover",
               backgroundPosition: "59% 20%",
-              outline: "8px solid rgba(163, 163, 163, 0.36)",
+              boxShadow: "0px 0px 0px 8px rgba(163, 163, 163, 0.36)",
               marginBottom: "40px",
             }}
           ></div>
-          <h1>Paul Yu</h1>
-          <span>Physiotherapist</span>
-          <hr></hr>
+          <h1 id="profilea-name">Paul Yu</h1>
+          <span id="profilea-title">Physiotherapist</span>
+          <hr id="profilea-line"></hr>
         </div>
       </section>
       <section
+        id="profilea-desc"
         css={{
           backgroundColor: "#151515",
           padding: "50px",
