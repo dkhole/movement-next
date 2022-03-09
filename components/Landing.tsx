@@ -205,6 +205,7 @@ export const Landing = () => {
           alt="pic of Sydney Harbour Bridge"
           objectFit="cover"
           layout="fill"
+          placeholder="blur"
           quality={100}
         ></Image>
       </div>
