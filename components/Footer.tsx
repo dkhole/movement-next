@@ -42,10 +42,14 @@ export const Footer = ({}) => {
           href={"https://www.instagram.com/movementmechanicshp/?hl=en"}
           passHref
         >
-          <Instagram height={30} width={30} />
+          <a aria-label="Link to our instagram page">
+            <Instagram height={30} width={30} />
+          </a>
         </Link>
         <Link href={"https://www.facebook.com/movementmechanicshp/"} passHref>
-          <Facebook height={30} width={30} />
+          <a aria-label="Link to our facebook page">
+            <Facebook height={30} width={30} />
+          </a>
         </Link>
       </div>
       <span>© 2022 Movement Mechanics Pty Ltd</span>

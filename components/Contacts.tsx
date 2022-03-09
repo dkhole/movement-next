@@ -46,6 +46,7 @@ export const Contacts = ({}) => {
           <iframe
             width="400"
             height="300"
+            title="map of location"
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=2%20Joyner%20Ave,%20Newington&t=&z=13&ie=UTF8&iwloc=&output=embed"
           ></iframe>

@@ -242,10 +242,14 @@ export const Landing = () => {
           href={"https://www.instagram.com/movementmechanicshp/?hl=en"}
           passHref
         >
-          <Instagram height={30} width={30} />
+          <a aria-label="Link to our Instagram page">
+            <Instagram height={30} width={30} />
+          </a>
         </Link>
         <Link href={"https://www.facebook.com/movementmechanicshp/"} passHref>
-          <Facebook height={30} width={30} />
+          <a aria-label="Link to our Facebook page">
+            <Facebook height={30} width={30} />
+          </a>
         </Link>
         <Link
           href={
@@ -253,10 +257,14 @@ export const Landing = () => {
           }
           passHref
         >
-          <Location height={30} width={30} />
+          <a aria-label="Click for google map location">
+            <Location height={30} width={30} />
+          </a>
         </Link>
         <Link href={"#contact"} passHref>
-          <Phone height={30} width={30} />
+          <a aria-label="Click for contact details">
+            <Phone height={30} width={30} />
+          </a>
         </Link>
       </footer>
     </div>
