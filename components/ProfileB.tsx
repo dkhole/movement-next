@@ -147,12 +147,12 @@ export const ProfileB = ({ preview }: ProfileProps) => {
             css={{
               height: "300px",
               width: "230px",
-              borderRadius: "50%",
+              borderRadius: "0 50px 0 50px",
               backgroundColor: "grey",
               background: "url(mintae.webp)",
               backgroundSize: "cover",
               backgroundPosition: "90% 20%",
-              boxShadow: "0px 0px 0px 8px rgba(163, 163, 163, 0.36)",
+              boxShadow: "0px 0px 0px 10px rgba(78, 78, 78, 0.5)",
               marginBottom: "40px",
             }}
           >

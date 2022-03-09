@@ -149,12 +149,12 @@ export const ProfileA = ({ preview }: ProfileProps) => {
             css={{
               height: "300px",
               width: "230px",
-              borderRadius: "50%",
+              borderRadius: "0 50px 0 50px",
               backgroundColor: "grey",
               background: "url(paul.webp)",
               backgroundSize: "cover",
-              backgroundPosition: "59% 20%",
-              boxShadow: "0px 0px 0px 8px rgba(163, 163, 163, 0.36)",
+              backgroundPosition: "62%",
+              boxShadow: "0px 0px 0px 10px rgba(78, 78, 78, 0.5)",
               marginBottom: "40px",
             }}
           ></div>

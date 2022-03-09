@@ -98,7 +98,7 @@ export const Landing = () => {
             width: "100%",
           },
           "& svg g": {
-            fill: "rgba(152, 150, 221, 0.55)",
+            fill: "#654fc978",
           },
           "@media (min-width: 800px)": {
             height: "300px",
@@ -114,7 +114,7 @@ export const Landing = () => {
           zIndex: 2,
           height: "100%",
           width: "100%",
-          backgroundColor: "rgba(12, 12, 12, 0.3);",
+          backgroundColor: "rgba(12, 12, 12, 0.6);",
           backdropFilter: " blur(2.5px)",
           color: "white",
         }}
@@ -135,7 +135,7 @@ export const Landing = () => {
           id="landing-subtitle"
           css={{
             fontSize: "1rem",
-            fontWeight: 100,
+            fontWeight: 200,
             zIndex: 2,
             "@media (min-width: 800px)": {
               fontSize: "1.2rem",
@@ -161,14 +161,16 @@ export const Landing = () => {
         <a
           href="https://movement-mechanics.au2.cliniko.com/bookings#service"
           css={{
-            height: "35px",
-            width: "100px",
+            height: "30px",
+            width: "95px",
             background: "none",
             border: "2px solid white",
+            borderRadius: "0 15px 0 15px",
             color: "white",
             fontFamily: "Prompt, sans-serif",
-            lineHeight: "34px",
-            fontWeight: 200,
+            fontSize: "0.8rem",
+            lineHeight: "30px",
+            fontWeight: 300,
             zIndex: 2,
             cursor: "pointer",
             textDecoration: "none",
@@ -177,10 +179,10 @@ export const Landing = () => {
               color: "black",
             },
             "@media (min-width: 800px)": {
-              height: "50px",
+              height: "40px",
               width: "110px",
               fontSize: "1rem",
-              lineHeight: "48px",
+              lineHeight: "38px",
             },
           }}
         >

@@ -73,7 +73,7 @@ export const Nav = () => {
             width: "100%",
           },
           "svg g": {
-            fill: "#45457c",
+            fill: "#433587",
           },
           "@media (min-width: 800px)": {
             height: "150px",
